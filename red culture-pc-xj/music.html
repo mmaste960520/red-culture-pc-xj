@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>经典-音乐</title>
+        <meta name="description" content="红色文化">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+        <meta name="viewport" content="width=1200">
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/uikit.min.css">
+        <link rel="stylesheet" href="css/inside.css">
+        <link rel="stylesheet" href="css/viewer.min.css">
+        <link rel="stylesheet" href="css/audio.css">
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/uikit.min.js"></script>
+        <script src="js/viewer.min.js"></script>
+        <script src="js/public.js"></script>
+   
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="insideWrap musicWrap uk-animation-slide-top">
+            <!-- 主页和返回按钮位置 -->
+            <a href="index.html" class="home"><img src="img/home.png"></a>
+            <a href="index.html" class="goBack"><img src="img/goback.png"></a>
+            <!-- 标题 -->
+            <img src="img/yinyue.png" class="commonTitle">
+            
+            <div class="musicsList clearfix">
+                <div id="wrapper" class="audio" >
+                    <audio preload="auto"src="audio.mp3" id="audio" controls>
+                       
+                    </audio>
+                </div>
+                <span class="left musicsItem">
+                    <p class="musicName">一道道水来一道道山</p>
+                    <p class="author">创作者：<span>王昆</span></p>
+                    <span class="playbox ">
+                        <img src="img/redplay.png" class="musicplay" data-music="audio.mp3">
+                        <img src="img/music.gif" class="playing">
+                    </span>                    
+                </span>
+                <span class="left musicsItem">
+                    <p class="musicName">一道道水来一道道山</p>
+                    <p class="author">创作者：<span>王昆</span></p>
+                    <span class="playbox ">
+                        <img src="img/redplay.png" class="musicplay" data-music="introduce.mp3">
+                        <img src="img/music.gif" class="playing">
+                    </span>                    
+                </span>
+                <span class="left musicsItem">
+                    <p class="musicName">一道道水来一道道山</p>
+                    <p class="author">创作者：<span>王昆</span></p>
+                    <span class="playbox ">
+                        <img src="img/redplay.png" class="musicplay">
+                        <img src="img/music.gif" class="playing">
+                    </span>                    
+                </span>
+                <span class="left musicsItem">
+                    <p class="musicName">一道道水来一道道山</p>
+                    <p class="author">创作者：<span>王昆</span></p>
+                    <span class="playbox ">
+                        <img src="img/redplay.png" class="musicplay">
+                        <img src="img/music.gif" class="playing">
+                    </span>                    
+                </span>
+                <span class="left musicsItem">
+                    <p class="musicName">一道道水来一道道山</p>
+                    <p class="author">创作者：<span>王昆</span></p>
+                    <span class="playbox ">
+                        <img src="img/redplay.png" class="musicplay">
+                        <img src="img/music.gif" class="playing">
+                    </span>                    
+                </span>
+                <span class="left musicsItem">
+                    <p class="musicName">一道道水来一道道山</p>
+                    <p class="author">创作者：<span>王昆</span></p>
+                    <span class="playbox ">
+                        <img src="img/redplay.png" class="musicplay">
+                        <img src="img/music.gif" class="playing">
+                    </span>                    
+                </span>
+                <span class="left musicsItem">
+                    <p class="musicName">一道道水来一道道山</p>
+                    <p class="author">创作者：<span>王昆</span></p>
+                    <span class="playbox ">
+                        <img src="img/redplay.png" class="musicplay">
+                        <img src="img/music.gif" class="playing">
+                    </span>                    
+                </span>
+                <span class="left musicsItem">
+                    <p class="musicName">一道道水来一道道山</p>
+                    <p class="author">创作者：<span>王昆</span></p>
+                    <span class="playbox ">
+                        <img src="img/redplay.png" class="musicplay">
+                        <img src="img/music.gif" class="playing">
+                    </span>                    
+                </span>
+                <span class="left musicsItem">
+                    <p class="musicName">一道道水来一道道山</p>
+                    <p class="author">创作者：<span>王昆</span></p>
+                    <span class="playbox ">
+                        <img src="img/redplay.png" class="musicplay">
+                        <img src="img/music.gif" class="playing">
+                    </span>                    
+                </span>
+                
+            </div>
+             <!-- 分页 -->
+             <div class="pagesBox">
+                <ul id="pagenation" class="pages_list"></ul>
+            </div>
+        </div>
+        <script src="js/audioplayer.js"></script>
+        <script src="js/jq-paginator.js" ></script>
+        <script>
+             //分页
+        $.jqPaginator('#pagenation', {
+            totalPages: 10,
+            visiblePages: 4,
+            currentPage: 1,
+            first: '<li class="prev"><a href="javascript:;">首页</a></li>',
+            prev: '<li class="prev"><a href="javascript:;"><<</a></li>',
+            next: '<li class="next"><a href="javascript:;">>></a></li>',
+            last: '<li class="prev"><a href="javascript:;">末页</a></li>',
+            page: '<li class="page"><a href="javascript:;">{{page}}</a></li>'
+        });
+       
+       //音频播放器初始化
+	 	 $('#wrapper audio').audioPlayer();
+        $(".musicplay").click(function(){
+            var music = $(this).attr("data-music");
+            var audio = document.getElementById("audio");
+            $(".audioplayer-playpause").click()
+            console.log(music)
+            $(this).parent().addClass("on");
+            $(this).parents(".musicsItem").siblings().find(".playbox").removeClass("on");
+            $("#audio").attr("src", music);
+            audio.play();
+            var playing = $(".audioplayer-playpause").attr("title");
+            if (playing == "Play") {
+            $(".audioplayer-playpause").click()
+        }
+        })
+        $(".audioplayer-playpause").click(function(){
+
+        })
+        </script>
+    </body>
+</html>

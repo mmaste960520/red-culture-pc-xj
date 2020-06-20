@@ -1,0 +1,112 @@
+.indexLeft,.indexRight
+{
+  width:50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.indexLeft{
+  left: 0;
+  background: url("../img/indexLeft.jpg")no-repeat;
+  background-size: 100% 100%;
+
+}
+.indexRight{
+  right: 0;
+  background: url("../img/indexRight.png")no-repeat;
+  background-size: 100% 100%;
+ 
+}
+@keyframes slideLeft {
+ from{
+  transform: rotateY(0);
+ }
+ to{
+  transform: rotateY(720deg);
+ }
+}
+@-webkit-keyframes slideLeft{
+  from{
+    transform: rotateY(0);
+   }
+   to{
+    transform: rotateY(720deg);
+   }
+}
+.linkBox{
+  position: absolute;
+  width: 7.14rem;
+  height: 8.24rem;
+  left: 50%;
+  top: 50%;
+  margin-left: -3.57rem;
+  margin-top: -4.12rem;
+}
+.classics{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2.3rem;
+  height: 5.5rem;
+  margin-top: -2.75rem;
+  margin-left: -1.15rem;
+}
+.celebrities{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2.3rem;
+  height: 5.5rem;
+  margin-top: -2.75rem;
+  margin-left: -1.15rem;
+}
+.flip-container {
+  cursor: pointer;
+  width: 7.14rem;
+  height: 8.24rem;
+  margin: 0 auto 0 auto;
+  -webkit-perspective: 500;
+  -moz-perspective: 500;
+  -ms-perspective: 500;
+  perspective: 500;
+  -ms-transform: perspective(500px);
+  -moz-transform: perspective(500px);
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+}
+.flipper {
+  position: relative;
+  height: 100%;
+  transition: 9s;
+  transform-style: preserve-3d;
+  animation: slideLeft 9s;
+  animation-direction:alternate;
+  -webkit-animation-iteration-count:infinite ;
+  animation-timing-function:linear;
+}
+.flip-container  img {
+  transition: all 5s ease-in-out;
+  -webkit-transition: all 5s ease-in-out;
+  -moz-transition: all 5s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+.front {
+  transform: rotateY(0deg);
+  z-index: 2;
+ 
+  background-size: 100% 100%;
+}
+.back {
+  transform: rotateY(-180deg);
+ 
+  background-size: 100% 100%;
+}
+.front,
+.back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  backface-visibility: hidden;
+}
+

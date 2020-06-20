@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>经典-音乐名人详情</title>
+        <meta name="description" content="红色文化">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+        <meta name="viewport" content="width=1200">
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/uikit.min.css">
+        <link rel="stylesheet" href="css/inside.css">
+
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/uikit.min.js"></script>
+
+        <script src="js/public.js"></script>
+   
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <audio src="" id="musicAudio" style="display: none;"></audio>
+        <div class="insideWrap celebritiesWrap  uk-animation-slide-top">
+            <!-- 主页和返回按钮位置 -->
+            <a href="index.html" class="home"><img src="img/home.png"></a>
+            <a href="index.html" class="goBack"><img src="img/goback.png"></a>
+            <!-- 标题 -->
+            <img src="img/mingren.png" class="commonTitle">
+            <div class="celebritiesDetailsContent">
+                <div class="brief clearfix">
+                    <span class="left avator">
+                        <img src="img/maodun.png" >
+                    </span>
+                    <div class="right content">
+                        <h2 class="name">王朝闻</h2>
+                        <p class="">
+                            王朝闻，别名王昭文，后取《论语·里仁》中“朝闻道，夕死可矣”语义，更名王朝闻。笔名汶石、廖化、席斯珂，雕塑家、文艺理论家、美学家。卓越的文艺理论家、美学家、雕塑家，艺术教育家，新中国马克思主义文艺理论和美学的开拓者与奠基人之一。
+                        </p>
+                    </div>
+                </div>
+                <div class="works">
+                    <div class="workDetails">
+                        <p class="worksTitle"><img src="img/worksTitle.png">代表作品</p>
+                        <div class="details clearfix">
+                            <span class="left musicsItem">
+                                <p class="musicName">一道道水来一道道山</p>
+                                <p class="author">创作者：<span>王昆</span></p>
+                                <span class="playbox ">
+                                    <img src="img/redplay.png" class="musicplay" data-music="audio.mp3">
+                                    <img src="img/music.gif" class="playing">
+                                </span>                    
+                            </span>
+                            <span class="left musicsItem">
+                                <p class="musicName">黄河大合唱</p>
+                                <p class="author">创作者：<span>冼星海</span></p>
+                                <span class="playbox ">
+                                    <img src="img/redplay.png" class="musicplay" data-music="introduce.mp3">
+                                    <img src="img/music.gif" class="playing">
+                                </span>                    
+                            </span>
+                            <span class="left musicsItem">
+                                <p class="musicName">一道道水来一道道山</p>
+                                <p class="author">创作者：<span>王昆</span></p>
+                                <span class="playbox ">
+                                    <img src="img/redplay.png" class="musicplay">
+                                    <img src="img/music.gif" class="playing">
+                                </span>                    
+                            </span>
+                            <span class="left musicsItem">
+                                <p class="musicName">一道道水来一道道山</p>
+                                <p class="author">创作者：<span>王昆</span></p>
+                                <span class="playbox ">
+                                    <img src="img/redplay.png" class="musicplay">
+                                    <img src="img/music.gif" class="playing">
+                                </span>                    
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+        
+        //音乐播放
+        var audio = document.getElementById("musicAudio");
+        $(".musicplay").click(function(){
+            var music = $(this).attr("data-music");
+           
+            $(this).parent().addClass("on");
+            $(this).parents(".musicsItem").siblings().find(".playbox").removeClass("on");
+            $("#musicAudio").attr("src", music);
+            audio.play();
+        })
+        //音乐暂停
+        $(".playing").click(function(){
+            audio.pause()
+            $(this).parent().removeClass("on");
+        })
+        </script>
+    </body>
+</html>
